@@ -11,8 +11,7 @@ namespace BookDBFinal
     {
         public static List<Customer> GetAllCustomers()
         {
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = "Data Source=DESKTOP-2GORGR5;Initial Catalog=BookRegistration;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            
 
             SqlCommand getCustomers = new SqlCommand();
             getCustomers.CommandText = "SELECT CustomerID" + ",DateOfBirth" +

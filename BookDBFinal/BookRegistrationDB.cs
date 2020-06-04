@@ -13,8 +13,7 @@ namespace BookDBFinal
         {
            
             
-                SqlConnection con = new SqlConnection();
-                con.ConnectionString = "Data Source=DESKTOP-2GORGR5;Initial Catalog=BookRegistration;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+               
 
                 SqlCommand getRegistrations = new SqlCommand();
                 getRegistrations.CommandText = "SELECT  CustomerID" + "ISBN" +
