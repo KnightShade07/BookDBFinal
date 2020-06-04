@@ -38,5 +38,12 @@ namespace BookDBFinal
         {
 
         }
+
+        private void btnAddBook_Click(object sender, EventArgs e)
+        {
+            Book book = new Book();
+
+            book.Title = cbBookTitle.Text;
+        }
     }
 }
