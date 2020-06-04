@@ -9,6 +9,7 @@ namespace BookDBFinal
     static class BookDB
     {
         //Gets all the books from the Database.
+        //Test
         public static List<Book> GetAllBooks()
         {
 
