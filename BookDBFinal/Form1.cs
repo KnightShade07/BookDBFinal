@@ -23,5 +23,20 @@ namespace BookDBFinal
         {
 
         }
+
+        private void btnRegisterBook_Click(object sender, EventArgs e)
+        {
+            //Validate Input
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtPickerBookDate_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
