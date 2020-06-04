@@ -11,8 +11,8 @@ namespace BookDBFinal
     {
         public static void RegisterBook()
         {
-            public static List<Registration> GetRegistrations()
-            {
+           
+            
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = "Data Source=DESKTOP-2GORGR5;Initial Catalog=BookRegistration;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
@@ -32,7 +32,6 @@ namespace BookDBFinal
                 }
 
                 con.Close();
-            }
         }
     }
 

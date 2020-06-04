@@ -42,13 +42,7 @@ namespace BookDBFinal
             
         }
 
-        private void PopulateBookList(List<Book> books)
-        {
-            foreach(Book b in books)
-            {
-                bookLst.Item.Add
-            }
-        }
+        
     } 
 
 

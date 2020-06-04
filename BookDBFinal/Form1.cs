@@ -42,8 +42,16 @@ namespace BookDBFinal
         private void btnAddBook_Click(object sender, EventArgs e)
         {
             Book book = new Book();
-
             book.Title = cbBookTitle.Text;
+        }
+
+        private void btnAddCustomer_Click(object sender, EventArgs e)
+        {
+            Customer customer = new Customer();
+            customer.FirstName = cbName.Text;
+            customer.LastName = cbName.Text;
+            customer.CustomerId = 0; //Placeholder //PRIMARY KEY
+            customer.Title = cbBookTitle.Text;
         }
     }
 }
