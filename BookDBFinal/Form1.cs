@@ -45,11 +45,13 @@ namespace BookDBFinal
             //Creates Book Object
             Book book = new Book();
             book.Title = cbBookTitle.Text;
-            book.BookIBSN
+            book.BookIBSN = TxtISBN.Text;
+            book.Price = Convert.ToDouble(txtPrice.Text);
 
 
             //adds to the database
             BookDB.Add(book);
+            //testMessage
 
             //close form
             Close();
