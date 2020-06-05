@@ -11,7 +11,7 @@ namespace BookDBFinal
     {
         public static List<Customer> GetAllCustomers()
         {
-            DBHelper.GetConnection();
+            
 
             SqlCommand getCustomers = new SqlCommand();
             getCustomers.CommandText = "SELECT CustomerID" + ",DateOfBirth" +
@@ -20,7 +20,9 @@ namespace BookDBFinal
                 ",Title";
             getCustomers.Connection = DBHelper.GetConnection();
 
-            DBHelper.GetConnection.Open();
+            SqlConnection dbConnection = DBHelper.GetConnection();
+
+            dbConnection.Open();
 
             SqlDataReader CustomerRdr = getCustomers.ExecuteReader();
             List<Customer> customerList = new List<Customer>();
@@ -35,7 +37,8 @@ namespace BookDBFinal
                 customerList.Add(tempCustomer);
 
             }
-            con.Close();
+
+            dbConnection.Close();
             return customerList;
         }
     }
