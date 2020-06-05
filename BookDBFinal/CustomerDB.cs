@@ -11,7 +11,7 @@ namespace BookDBFinal
     {
         public static List<Customer> GetAllCustomers()
         {
-            
+            DBHelper.GetConnection();
 
             SqlCommand getCustomers = new SqlCommand();
             getCustomers.CommandText = "SELECT CustomerID" + ",DateOfBirth" +
