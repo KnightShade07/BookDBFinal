@@ -11,16 +11,16 @@ namespace BookDBFinal
     {
         public static void RegisterBook()
         {
-           
-            
+
+            SqlConnection dbconnection = DBHelper.GetConnection();
                
 
                 SqlCommand getRegistrations = new SqlCommand();
                 getRegistrations.CommandText = "SELECT  CustomerID" + "ISBN" +
                     "RegDate";
-                getRegistrations.Connection = con;
+               
 
-                con.Open();
+                dbconnection.Open();
 
                 SqlDataReader Regrdr = getRegistrations.ExecuteReader();
                 List<Registration> regList = new List<Registration>();
@@ -30,7 +30,7 @@ namespace BookDBFinal
                     
                 }
 
-                con.Close();
+                dbconnection.Close();
         }
     }
 

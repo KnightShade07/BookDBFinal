@@ -14,16 +14,16 @@ namespace BookDBFinal
         {
 
 
-            
+            SqlConnection dbconnection = DBHelper.GetConnection();
 
             SqlCommand getBooks = new SqlCommand();
             getBooks.CommandText = "SELECT Id" +
                 ",ISBN" + ",Price" + ",Title";
 
 
-            getBooks.Connection = con;
+            
 
-            con.Open(); //Communicate to the DB
+            dbconnection.Open(); //Communicate to the DB
 
             SqlDataReader rdr = getBooks.ExecuteReader();
             List<Book> bookList = new List<Book>();
@@ -36,7 +36,7 @@ namespace BookDBFinal
                 bookList.Add(temp);
             }
 
-            con.Close(); //closes the connection to the database.
+            dbconnection.Close(); //closes the connection to the database.
             return bookList;
             
         }
