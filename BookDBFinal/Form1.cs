@@ -45,6 +45,7 @@ namespace BookDBFinal
             //Creates Book Object
             Book book = new Book();
             book.Title = cbBookTitle.Text;
+            book.BookIBSN
 
 
             //adds to the database
