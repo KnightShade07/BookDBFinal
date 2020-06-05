@@ -56,6 +56,11 @@ namespace BookDBFinal
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
             Customer customer = new Customer();
             customer.FirstName = cbName.Text;
             customer.LastName = cbName.Text;

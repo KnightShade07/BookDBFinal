@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Data.Common;
+
 namespace BookDBFinal
 {
     static class BookDB
@@ -55,7 +57,23 @@ namespace BookDBFinal
 
         public static void Delete(Book book)
         {
-            throw new NotImplementedException();
+            SqlConnection dbconnection = DBHelper.GetConnection();
+
+            string query = "DELETE FROM Book " +
+                "WHERE Id = @ISBN";
+            SqlCommand deleteCmd = new SqlCommand(query, dbconnection);
+            deleteCmd.Parameters.AddWithValue("@ISBN", book.BookIBSN);
+
+            dbconnection.Open();
+
+            int rows = deleteCmd.ExecuteNonQuery();
+
+            if(rows != 1)
+            {
+                throw new Exception("A book was not deleted.");
+            }
+
+            dbconnection.Close();
         }
 
     } 
