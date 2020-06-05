@@ -13,6 +13,11 @@ namespace BookDBFinal
         public string Title { get; set; }
 
         public double Price{ get; set; }
+
+        public override string ToString()
+        {
+            return BookIBSN;
+        }
     }
 
 }

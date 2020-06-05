@@ -26,7 +26,7 @@ namespace BookDBFinal
 
         private void btnRegisterBook_Click(object sender, EventArgs e)
         {
-            //Validate Input
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -70,9 +70,21 @@ namespace BookDBFinal
             
         }
 
+
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+            //Load all books
+            List<Book> allBooks = BookDB.GetAllBooks();
+
+            PopulateBookList(allBooks);
+        }
+
+        private void PopulateBookList(List<Book> books)
+        {
+            foreach(Book book in books)
+            {
+                cbBookTitle.Items.Add(book);
+            }
         }
     }
 }
