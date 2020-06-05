@@ -10,6 +10,8 @@ namespace BookDBFinal
     {
         //Gets all the books from the Database.
         //Test
+
+        
         public static List<Book> GetAllBooks()
         {
 
@@ -41,7 +43,21 @@ namespace BookDBFinal
             
         }
 
-        
+        public static void Add(Book book)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static void Update(Book book)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static void Delete(Book book)
+        {
+            throw new NotImplementedException();
+        }
+
     } 
 
 

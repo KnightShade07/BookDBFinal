@@ -41,8 +41,17 @@ namespace BookDBFinal
 
         private void btnAddBook_Click(object sender, EventArgs e)
         {
+
+            //Creates Book Object
             Book book = new Book();
             book.Title = cbBookTitle.Text;
+
+
+            //adds to the database
+            BookDB.Add(book);
+
+            //close form
+            Close();
         }
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
