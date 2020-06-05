@@ -11,10 +11,10 @@ namespace BookDBFinal
     {
         public static SqlConnection GetConnection()
         {
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = "Data Source=DESKTOP-2GORGR5;Initial Catalog=BookRegistration;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            SqlConnection databaseConnection = new SqlConnection();
+            databaseConnection.ConnectionString = "Data Source=DESKTOP-2GORGR5;Initial Catalog=BookRegistration;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
-            return con;
+            return databaseConnection;
         }
     }
 

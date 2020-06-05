@@ -18,9 +18,9 @@ namespace BookDBFinal
                 ",FirstName" +
                 ",LastName" +
                 ",Title";
-            getCustomers.Connection = con;
+            getCustomers.Connection = DBHelper.GetConnection();
 
-            con.Open();
+            DBHelper.GetConnection.Open();
 
             SqlDataReader CustomerRdr = getCustomers.ExecuteReader();
             List<Customer> customerList = new List<Customer>();
