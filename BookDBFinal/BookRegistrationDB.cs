@@ -16,8 +16,7 @@ namespace BookDBFinal
                
 
                 SqlCommand getRegistrations = new SqlCommand();
-                getRegistrations.CommandText = "SELECT  CustomerID" + "ISBN" +
-                    "RegDate";
+                getRegistrations.CommandText = "SELECT  CustomerId" + "ISBN";
                
 
                 dbconnection.Open();
@@ -27,6 +26,11 @@ namespace BookDBFinal
                 while (Regrdr.Read())
                 {
                     Registration tempReg = new Registration();
+                    tempReg.CustomerId = Convert.ToInt32(Regrdr["CustomerId"]);
+                    tempReg.ISBN = Convert.ToString(Regrdr["ISBN"]);
+                    regList.Add(tempReg);
+                    
+
                     
                 }
 
