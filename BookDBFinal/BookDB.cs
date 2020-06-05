@@ -47,7 +47,29 @@ namespace BookDBFinal
 
         public static void Add(Book book)
         {
-            throw new NotImplementedException();
+            //Get a connection to the DB
+            SqlConnection dbConnection = DBHelper.GetConnection();
+
+            //Set up a command object (query)
+            SqlCommand insertCmd = new SqlCommand();
+            insertCmd.Connection = dbConnection;
+            insertCmd.CommandText = "INSERT INTO BOOK(ISBN, Price, Title) " +
+                                    "VALUES(@ISBN, @Price, @Title)";
+
+            insertCmd.Parameters.AddWithValue("@ISBN", book.BookIBSN);
+            insertCmd.Parameters.AddWithValue( "@Price", book.Price);
+            insertCmd.Parameters.AddWithValue("@Title", book.Title);
+
+            //Open Connection
+            dbConnection.Open();
+
+            //Execute Command
+            insertCmd.ExecuteNonQuery();
+
+
+            //Close Connection
+            dbConnection.Close();
+
         }
 
         public static void Update(Book book)
