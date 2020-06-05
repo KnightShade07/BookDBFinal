@@ -9,7 +9,7 @@ BookRegistrationDB.cs - Where the Database Book Registration is handled.
 
 Customer.cs - Class for Customer Info.
 
-DBHelper.cs - ???
+DBHelper.cs - The class called when wanting to set up a database connection, this method has the connection string so that you don't have to create a connection string all over the place.
 
 Form1.cs - The form and display for the book handling application
 
