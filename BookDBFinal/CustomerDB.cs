@@ -11,16 +11,16 @@ namespace BookDBFinal
     {
         public static List<Customer> GetAllCustomers()
         {
-            
+            SqlConnection dbConnection = DBHelper.GetConnection();
 
             SqlCommand getCustomers = new SqlCommand();
             getCustomers.CommandText = "SELECT CustomerID" + ",DateOfBirth" +
                 ",FirstName" +
                 ",LastName" +
                 ",Title";
-            getCustomers.Connection = DBHelper.GetConnection();
+            getCustomers.Connection = dbConnection;
 
-            SqlConnection dbConnection = DBHelper.GetConnection();
+            
 
             dbConnection.Open();
 
