@@ -51,24 +51,28 @@ namespace BookDBFinal
 
             //adds to the database
             BookDB.Add(book);
-            //testMessage
+            
 
             //close form
             Close();
+
+            //display info
+            AddBookFrm bookFrm = new AddBookFrm();
         }
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
         {
             Customer customer = new Customer();
             customer.FirstName = cbName.Text;
             customer.LastName = cbName.Text;
             customer.CustomerId = 0; //Placeholder //PRIMARY KEY
             customer.Title = cbBookTitle.Text;
+            
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }
