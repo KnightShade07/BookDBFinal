@@ -14,14 +14,11 @@ namespace BookDBFinal
         public string LastName { get; set; }
         public string Title { get; set; }
 
-        public string FullName
-        {
-            get { return FirstName + " " + LastName; }
-        }
+        
 
         public string GetDisplayText(string seperator)
         {
-            return $"{CustomerId}{seperator}{FullName}{seperator}" +
+            return $"{DateOfBirth}{seperator}{FirstName}{seperator}{LastName}{seperator}" +
                 $"{Title}";
         }
     }
