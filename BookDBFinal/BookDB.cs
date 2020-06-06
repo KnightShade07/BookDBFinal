@@ -21,8 +21,11 @@ namespace BookDBFinal
             SqlConnection dbconnection = DBHelper.GetConnection();
 
             SqlCommand getBooks = new SqlCommand();
-            getBooks.CommandText = "SELECT Id" +
-                ",ISBN" + ",Price" + ",Title";
+            getBooks.CommandText = "SELECT Id " +
+                ",ISBN " + ",Price " + ",Title "
+                + " FROM Books";
+
+            getBooks.Connection = dbconnection;
 
 
             
