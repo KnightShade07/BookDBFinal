@@ -57,7 +57,7 @@ namespace BookDBFinal
             Close();
 
             //display info
-            AddBookFrm bookFrm = new AddBookFrm();
+            //AddBookFrm bookFrm = new AddBookFrm();
         }
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
