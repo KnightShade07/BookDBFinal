@@ -92,9 +92,9 @@ namespace BookDBFinal
         {
             foreach(Book book in books)
             {
-                cbBookTitle.Items.Add(book);
-                cbISBN.Items.Add(book);
-                cbPrice.Items.Add(book);
+                cbBookTitle.Items.Add(book.Title);
+                cbISBN.Items.Add(book.BookIBSN);
+                cbPrice.Items.Add(book.Price);
             }
         }
 
