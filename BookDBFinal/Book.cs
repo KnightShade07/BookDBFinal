@@ -12,7 +12,7 @@ namespace BookDBFinal
 
         public string Title { get; set; }
 
-        public double Price{ get; set; }
+        public decimal Price{ get; set; }
 
         public override string ToString()
         {
