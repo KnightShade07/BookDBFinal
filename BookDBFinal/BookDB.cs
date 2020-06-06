@@ -23,7 +23,7 @@ namespace BookDBFinal
             SqlCommand getBooks = new SqlCommand();
             getBooks.CommandText = "SELECT ISBN " 
                   + ",Price " + ",Title "
-                + " FROM Book";
+                + "FROM Book";
 
             getBooks.Connection = dbconnection;
 
