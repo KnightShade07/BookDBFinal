@@ -46,7 +46,7 @@ namespace BookDBFinal
             Book book = new Book();
             book.Title = cbBookTitle.Text;
             book.BookIBSN = TxtISBN.Text;
-            book.Price = Convert.ToDouble(txtPrice.Text);
+            book.Price = Decimal.Parse(txtPrice.Text);
 
 
             //adds to the database
