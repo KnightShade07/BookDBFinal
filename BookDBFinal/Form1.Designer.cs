@@ -37,16 +37,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.TxtISBN = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtPrice = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.cbISBN = new System.Windows.Forms.ComboBox();
+            this.cbPrice = new System.Windows.Forms.ComboBox();
+            this.dtpDOB = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cbName
             // 
             this.cbName.FormattingEnabled = true;
-            this.cbName.Location = new System.Drawing.Point(214, 43);
+            this.cbName.Location = new System.Drawing.Point(214, 12);
             this.cbName.Name = "cbName";
             this.cbName.Size = new System.Drawing.Size(121, 21);
             this.cbName.TabIndex = 0;
@@ -101,7 +103,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(122, 43);
+            this.label1.Location = new System.Drawing.Point(119, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 6;
@@ -126,13 +128,6 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Checkout Date:";
             // 
-            // TxtISBN
-            // 
-            this.TxtISBN.Location = new System.Drawing.Point(214, 129);
-            this.TxtISBN.Name = "TxtISBN";
-            this.TxtISBN.Size = new System.Drawing.Size(100, 20);
-            this.TxtISBN.TabIndex = 9;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -141,13 +136,6 @@
             this.label4.Size = new System.Drawing.Size(32, 13);
             this.label4.TabIndex = 10;
             this.label4.Text = "ISBN";
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Location = new System.Drawing.Point(214, 161);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(100, 20);
-            this.txtPrice.TabIndex = 11;
             // 
             // label5
             // 
@@ -158,15 +146,49 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Price";
             // 
+            // cbISBN
+            // 
+            this.cbISBN.FormattingEnabled = true;
+            this.cbISBN.Location = new System.Drawing.Point(214, 136);
+            this.cbISBN.Name = "cbISBN";
+            this.cbISBN.Size = new System.Drawing.Size(121, 21);
+            this.cbISBN.TabIndex = 13;
+            // 
+            // cbPrice
+            // 
+            this.cbPrice.FormattingEnabled = true;
+            this.cbPrice.Location = new System.Drawing.Point(214, 168);
+            this.cbPrice.Name = "cbPrice";
+            this.cbPrice.Size = new System.Drawing.Size(121, 21);
+            this.cbPrice.TabIndex = 14;
+            // 
+            // dtpDOB
+            // 
+            this.dtpDOB.Location = new System.Drawing.Point(214, 56);
+            this.dtpDOB.Name = "dtpDOB";
+            this.dtpDOB.Size = new System.Drawing.Size(200, 20);
+            this.dtpDOB.TabIndex = 15;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(122, 67);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(66, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Date of Birth";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 450);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.dtpDOB);
+            this.Controls.Add(this.cbPrice);
+            this.Controls.Add(this.cbISBN);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.TxtISBN);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -195,10 +217,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TxtISBN;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbISBN;
+        private System.Windows.Forms.ComboBox cbPrice;
+        private System.Windows.Forms.DateTimePicker dtpDOB;
+        private System.Windows.Forms.Label label6;
     }
 }
 
