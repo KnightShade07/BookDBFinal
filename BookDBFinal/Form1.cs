@@ -77,6 +77,12 @@ namespace BookDBFinal
             List<Book> allBooks = BookDB.GetAllBooks();
 
             PopulateBookList(allBooks);
+
+            //Load all customers
+
+            List<Customer> allCustomers = CustomerDB.GetAllCustomers();
+
+            PopulateCustomerList(allCustomers);
         }
 
         private void PopulateBookList(List<Book> books)
