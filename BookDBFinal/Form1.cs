@@ -88,5 +88,13 @@ namespace BookDBFinal
                 cbPrice.Items.Add(book);
             }
         }
+
+        private void PopulateCustomerList(List<Customer> customers)
+        {
+            foreach(Customer customer in customers)
+            {
+                cbName.Items.Add(customer);
+            }
+        }
     }
 }
