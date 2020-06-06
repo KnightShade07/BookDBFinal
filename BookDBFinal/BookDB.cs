@@ -21,9 +21,9 @@ namespace BookDBFinal
             SqlConnection dbconnection = DBHelper.GetConnection();
 
             SqlCommand getBooks = new SqlCommand();
-            getBooks.CommandText = "SELECT Id " +
-                ",ISBN " + ",Price " + ",Title "
-                + " FROM Books";
+            getBooks.CommandText = "SELECT ISBN " 
+                  + ",Price " + ",Title "
+                + " FROM Book";
 
             getBooks.Connection = dbconnection;
 
@@ -38,7 +38,7 @@ namespace BookDBFinal
             {
                 Book temp = new Book();
                 temp.BookIBSN = Convert.ToString(rdr["ISBN"]);
-                temp.Price = Convert.ToDouble(rdr["Price"]);
+                temp.Price = Convert.ToDecimal(rdr["Price"]);
                 temp.Title = Convert.ToString(rdr["Title"]);
                 bookList.Add(temp);
             }
