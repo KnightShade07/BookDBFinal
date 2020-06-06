@@ -41,6 +41,11 @@ namespace BookDBFinal
             dbConnection.Close();
             return customerList;
         }
+
+        public static void AddCustomer(Customer customer)
+        {
+
+        }
     }
 
 }
