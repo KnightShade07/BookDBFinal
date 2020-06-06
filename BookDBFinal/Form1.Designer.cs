@@ -1,6 +1,6 @@
 ﻿namespace BookDBFinal
 {
-    partial class Form1
+    partial class AddBookFrm
     {
         /// <summary>
         /// Required designer variable.

@@ -12,9 +12,9 @@ using System.Windows.Forms;
 namespace BookDBFinal
 {
     
-    public partial class Form1 : Form
+    public partial class AddBookFrm : Form
     {
-        public Form1()
+        public AddBookFrm()
         {
             InitializeComponent();
         }
@@ -56,8 +56,9 @@ namespace BookDBFinal
             //close form
             Close();
 
-            //display info
-            //AddBookFrm bookFrm = new AddBookFrm();
+            //displays info and creates a form
+            AddBookFrm addBookFrm = new AddBookFrm();
+            addBookFrm.ShowDialog();
         }
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
