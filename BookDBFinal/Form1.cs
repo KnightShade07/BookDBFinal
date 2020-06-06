@@ -63,8 +63,8 @@ namespace BookDBFinal
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
             Customer customer = new Customer();
-            customer.FirstName = cbName.Text;
-            customer.LastName = cbName.Text;
+            customer.FirstName = cbFirstName.Text;
+            customer.LastName = cbLastName.Text;
             customer.Title = cbBookTitle.Text;
             customer.DateOfBirth = dtpDOB.Value;
 
@@ -101,7 +101,7 @@ namespace BookDBFinal
         {
             foreach(Customer customer in customers)
             {
-                cbName.Items.Add(customer);
+                cbFirstName.Items.Add(customer);
             }
         }
     }
