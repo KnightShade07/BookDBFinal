@@ -67,6 +67,8 @@ namespace BookDBFinal
             customer.LastName = cbName.Text;
             customer.Title = cbBookTitle.Text;
             customer.DateOfBirth = dtpDOB.Value;
+
+            CustomerDB.AddCustomer(customer);
             
         }
 
