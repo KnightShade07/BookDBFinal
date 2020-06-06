@@ -44,6 +44,23 @@ namespace BookDBFinal
 
         public static void AddCustomer(Customer customer)
         {
+            SqlConnection dbConnection = DBHelper.GetConnection();
+
+            SqlCommand insertCmd = new SqlCommand();
+            insertCmd.Connection = dbConnection;
+            insertCmd.CommandText = "INSERT INTO Customer(DateOfBirth,FirstName,LastName,Title)" +
+                "VALUES(@DateOfBirth, @FirstName @LastName, @Title)";
+
+            insertCmd.Parameters.AddWithValue("@DateOfBirth", customer.DateOfBirth);
+            insertCmd.Parameters.AddWithValue("@FirstName", customer.FirstName);
+            insertCmd.Parameters.AddWithValue("@LastName", customer.LastName);
+            insertCmd.Parameters.AddWithValue("@Title", customer.Title);
+
+            dbConnection.Open();
+
+            insertCmd.ExecuteNonQuery();
+
+            dbConnection.Close();
 
         }
     }
