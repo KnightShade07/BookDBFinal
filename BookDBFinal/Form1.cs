@@ -45,8 +45,8 @@ namespace BookDBFinal
             //Creates Book Object
             Book book = new Book();
             book.Title = cbBookTitle.Text;
-            book.BookIBSN = TxtISBN.Text;
-            book.Price = Decimal.Parse(txtPrice.Text);
+            book.BookIBSN = cbISBN.Text;
+            book.Price = Decimal.Parse(cbPrice.Text);
 
 
             //adds to the database
@@ -65,8 +65,8 @@ namespace BookDBFinal
             Customer customer = new Customer();
             customer.FirstName = cbName.Text;
             customer.LastName = cbName.Text;
-            customer.CustomerId = 0; //Placeholder //PRIMARY KEY
             customer.Title = cbBookTitle.Text;
+            customer.DateOfBirth = dtpDOB.Value;
             
         }
 
@@ -84,6 +84,8 @@ namespace BookDBFinal
             foreach(Book book in books)
             {
                 cbBookTitle.Items.Add(book);
+                cbISBN.Items.Add(book);
+                cbPrice.Items.Add(book);
             }
         }
     }
