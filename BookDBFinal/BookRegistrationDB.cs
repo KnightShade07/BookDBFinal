@@ -36,6 +36,13 @@ namespace BookDBFinal
 
                 dbconnection.Close();
         }
+
+        public static void AddReg(Registration reg)
+        {
+
+        }
     }
+
+    
 
 }
