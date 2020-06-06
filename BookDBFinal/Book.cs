@@ -14,10 +14,13 @@ namespace BookDBFinal
 
         public decimal Price{ get; set; }
 
-        public override string ToString()
+        
+
+        public string GetDisplayText(string seperator)
         {
-            return BookIBSN;
-        } 
+            return $"{BookIBSN}{seperator}{Price}{seperator}" +
+                $"{Title}";
+        }
     }
 
 }
