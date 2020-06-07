@@ -102,8 +102,8 @@ namespace BookDBFinal
         {
             foreach(Customer customer in customers)
             {
-                cbFirstName.Items.Add(customer);
-                cbLastName.Items.Add(customer);
+                cbFirstName.Items.Add(customer.FirstName);
+                cbLastName.Items.Add(customer.LastName);
             }
         }
     }
