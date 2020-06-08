@@ -9,14 +9,14 @@ namespace BookDBFinal
 {
     static class BookRegistrationDB
     {
-        public static void RegisterBook()
+        public static List<Registration> RegisterBook()
         {
 
             SqlConnection dbconnection = DBHelper.GetConnection();
                
 
                 SqlCommand getRegistrations = new SqlCommand();
-                getRegistrations.CommandText = "SELECT  CustomerId" + ",ISBN " +",RegDate " +
+                getRegistrations.CommandText = "SELECT ISBN" + ",RegDate " +
                 "FROM Registration";
 
             getRegistrations.Connection = dbconnection;
@@ -29,7 +29,6 @@ namespace BookDBFinal
                 while (Regrdr.Read())
                 {
                     Registration tempReg = new Registration();
-                    tempReg.CustomerId = Convert.ToInt32(Regrdr["CustomerId"]);
                     tempReg.ISBN = Convert.ToString(Regrdr["ISBN"]);
                     tempReg.RegDate = Convert.ToDateTime(Regrdr["RegDate"]);
                     regList.Add(tempReg);
@@ -39,6 +38,7 @@ namespace BookDBFinal
                 }
 
                 dbconnection.Close();
+                return regList;
         }
 
         public static void AddReg(Registration reg)
@@ -48,10 +48,8 @@ namespace BookDBFinal
             //Set up a command object (query)
             SqlCommand insertCmd = new SqlCommand();
             insertCmd.Connection = dbConnection;
-            insertCmd.CommandText = "INSERT INTO Registration(CustomerId, ISBN, RegDate)" +
-                                    "VALUES(@CustomerId, @ISBN, @RegDate)";
-
-            insertCmd.Parameters.AddWithValue("@CustomerId", reg.CustomerId);
+            insertCmd.CommandText = "INSERT INTO Registration(ISBN, RegDate)" +
+                                    "VALUES(@ISBN, @RegDate)";
             insertCmd.Parameters.AddWithValue("@ISBN", reg.ISBN);
             insertCmd.Parameters.AddWithValue("@RegDate", reg.RegDate);
 
