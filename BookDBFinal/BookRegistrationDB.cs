@@ -16,7 +16,7 @@ namespace BookDBFinal
                
 
                 SqlCommand getRegistrations = new SqlCommand();
-                getRegistrations.CommandText = "SELECT  CustomerId" + "ISBN";
+                getRegistrations.CommandText = "SELECT  CustomerId" + ",ISBN ";
                
 
                 dbconnection.Open();
@@ -39,7 +39,21 @@ namespace BookDBFinal
 
         public static void AddReg(Registration reg)
         {
+            SqlConnection dbConnection = DBHelper.GetConnection();
 
+            SqlCommand insertCmd = new SqlCommand();
+            insertCmd.Connection = dbConnection;
+            insertCmd.CommandText = "INSERT INTO Registration(CustomerId,ISBN)" +
+                "VALUES(@CustomerId, @ISBN)";
+
+            insertCmd.Parameters.AddWithValue("@CustomerId", reg.CustomerId);
+            insertCmd.Parameters.AddWithValue("@ISBN", reg.ISBN);
+
+            dbConnection.Open();
+
+            insertCmd.ExecuteNonQuery();
+
+            dbConnection.Close();
         }
     }
 
