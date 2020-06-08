@@ -26,7 +26,9 @@ namespace BookDBFinal
 
         private void btnRegisterBook_Click(object sender, EventArgs e)
         {
-            
+            Registration regBook = new Registration();
+            regBook.ISBN = "Customer ISBN: " + cbISBN.Text;
+            BookRegistrationDB.AddReg(regBook);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -45,7 +47,7 @@ namespace BookDBFinal
             //Creates Book Object
             Book book = new Book();
             book.Title = cbBookTitle.Text;
-            book.BookIBSN = cbISBN.Text;
+            book.BookIBSN =  "Book ISBN: " + cbISBN.Text;
             book.Price = Decimal.Parse(cbPrice.Text);
 
 
@@ -104,6 +106,14 @@ namespace BookDBFinal
             {
                 cbFirstName.Items.Add(customer.FirstName);
                 cbLastName.Items.Add(customer.LastName);
+            }
+        }
+
+        private void PopulateRegList(List<Registration> registrations)
+        {
+            foreach(Registration registration in registrations)
+            {
+                cbISBN.Items.Add(registration.ISBN);
             }
         }
     }
