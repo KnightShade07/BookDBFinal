@@ -28,6 +28,7 @@ namespace BookDBFinal
         {
             Registration regBook = new Registration();
             regBook.ISBN = "Customer ISBN: " + cbISBN.Text;
+            regBook.RegDate = dtPickerBookDate.Value;
             BookRegistrationDB.AddReg(regBook);
         }
 
@@ -114,6 +115,7 @@ namespace BookDBFinal
             foreach(Registration registration in registrations)
             {
                 cbISBN.Items.Add(registration.ISBN);
+
             }
         }
     }

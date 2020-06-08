@@ -12,6 +12,8 @@ namespace BookDBFinal
 
         public string ISBN { get; set; }
 
+        public DateTime RegDate { get; set; }
+
         
     }
 

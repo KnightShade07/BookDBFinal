@@ -16,7 +16,10 @@ namespace BookDBFinal
                
 
                 SqlCommand getRegistrations = new SqlCommand();
-                getRegistrations.CommandText = "SELECT  CustomerId" + ",ISBN ";
+                getRegistrations.CommandText = "SELECT  CustomerId" + ",ISBN " +",RegDate " +
+                "FROM Registration";
+
+                getRegistrations.Connection = dbconnection;
                
 
                 dbconnection.Open();
@@ -28,6 +31,7 @@ namespace BookDBFinal
                     Registration tempReg = new Registration();
                     tempReg.CustomerId = Convert.ToInt32(Regrdr["CustomerId"]);
                     tempReg.ISBN = Convert.ToString(Regrdr["ISBN"]);
+                    tempReg.RegDate = Convert.ToDateTime(Regrdr["RegDate"]);
                     regList.Add(tempReg);
                     
 
@@ -43,11 +47,12 @@ namespace BookDBFinal
 
             SqlCommand insertCmd = new SqlCommand();
             insertCmd.Connection = dbConnection;
-            insertCmd.CommandText = "INSERT INTO Registration(CustomerId,ISBN)" +
-                "VALUES(@CustomerId, @ISBN)";
+            insertCmd.CommandText = "INSERT INTO Registration(CustomerId,ISBN,RegDate)" +
+                "VALUES(@CustomerId, @ISBN, @RegDate)";
 
             insertCmd.Parameters.AddWithValue("@CustomerId", reg.CustomerId);
             insertCmd.Parameters.AddWithValue("@ISBN", reg.ISBN);
+            insertCmd.Parameters.AddWithValue("@RegDate", reg.RegDate);
 
             dbConnection.Open();
 
