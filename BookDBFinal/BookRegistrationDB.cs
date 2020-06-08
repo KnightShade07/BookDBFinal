@@ -19,7 +19,7 @@ namespace BookDBFinal
                 getRegistrations.CommandText = "SELECT  CustomerId" + ",ISBN " +",RegDate " +
                 "FROM Registration";
 
-                getRegistrations.Connection = dbconnection;
+            getRegistrations.Connection = dbconnection;
                
 
                 dbconnection.Open();
@@ -45,20 +45,26 @@ namespace BookDBFinal
         {
             SqlConnection dbConnection = DBHelper.GetConnection();
 
+            //Set up a command object (query)
             SqlCommand insertCmd = new SqlCommand();
             insertCmd.Connection = dbConnection;
-            insertCmd.CommandText = "INSERT INTO Registration(CustomerId,ISBN,RegDate)" +
-                "VALUES(@CustomerId, @ISBN, @RegDate)";
+            insertCmd.CommandText = "INSERT INTO Registration(CustomerId, ISBN, RegDate) " +
+                                    "VALUES(@CustomerId, @ISBN, @RegDate)";
 
             insertCmd.Parameters.AddWithValue("@CustomerId", reg.CustomerId);
             insertCmd.Parameters.AddWithValue("@ISBN", reg.ISBN);
             insertCmd.Parameters.AddWithValue("@RegDate", reg.RegDate);
 
+            //Open Connection
             dbConnection.Open();
 
+            //Execute Command
             insertCmd.ExecuteNonQuery();
 
+
+            //Close Connection
             dbConnection.Close();
+
         }
     }
 
