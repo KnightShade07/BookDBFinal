@@ -15,6 +15,8 @@ Form1.cs - The form and display for the book handling application
 
 Program.cs - main entry point for the application.
 
-Registration.cs - class for handling book registration.
+Registration.cs - Class for handling book registration.
+
+Final_BookRegistrationDB.sql - The Database that goes with the application.
 
 
