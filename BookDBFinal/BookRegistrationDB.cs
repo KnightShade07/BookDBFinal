@@ -13,32 +13,33 @@ namespace BookDBFinal
         {
 
             SqlConnection dbconnection = DBHelper.GetConnection();
-               
 
-                SqlCommand getRegistrations = new SqlCommand();
-                getRegistrations.CommandText = "SELECT ISBN" + ",RegDate " +
+
+            SqlCommand getRegistrations = new SqlCommand();
+            getRegistrations.CommandText = "SELECT CustomerID " + ",ISBN " +
+                ",RegDate " +
                 "FROM Registration";
 
             getRegistrations.Connection = dbconnection;
-               
 
-                dbconnection.Open();
 
-                SqlDataReader Regrdr = getRegistrations.ExecuteReader();
-                List<Registration> regList = new List<Registration>();
-                while (Regrdr.Read())
-                {
-                    Registration tempReg = new Registration();
-                    tempReg.ISBN = Convert.ToString(Regrdr["ISBN"]);
-                    tempReg.RegDate = Convert.ToDateTime(Regrdr["RegDate"]);
-                    regList.Add(tempReg);
-                    
+            dbconnection.Open();
 
-                    
-                }
+            SqlDataReader Regrdr = getRegistrations.ExecuteReader();
+            List<Registration> regList = new List<Registration>();
+            while (Regrdr.Read())
+            {
+                Registration tempReg = new Registration();
+                tempReg.ISBN = Convert.ToString(Regrdr["ISBN"]);
+                tempReg.RegDate = Convert.ToDateTime(Regrdr["RegDate"]);
+                regList.Add(tempReg);
 
-                dbconnection.Close();
-                return regList;
+
+
+            }
+
+            dbconnection.Close();
+            return regList;
         }
 
         public static void AddReg(Registration reg)
@@ -50,8 +51,10 @@ namespace BookDBFinal
             insertCmd.Connection = dbConnection;
             insertCmd.CommandText = "INSERT INTO Registration(ISBN, RegDate)" +
                                     "VALUES(@ISBN, @RegDate)";
+
             insertCmd.Parameters.AddWithValue("@ISBN", reg.ISBN);
             insertCmd.Parameters.AddWithValue("@RegDate", reg.RegDate);
+            
 
             //Open Connection
             dbConnection.Open();
@@ -66,6 +69,6 @@ namespace BookDBFinal
         }
     }
 
-    
+
 
 }

@@ -27,7 +27,7 @@ namespace BookDBFinal
         private void btnRegisterBook_Click(object sender, EventArgs e)
         {
             Registration regBook = new Registration();
-            regBook.ISBN = "Customer ISBN: " + cbISBN.Text;
+            regBook.ISBN = cbISBN.Text;
             regBook.RegDate = dtPickerBookDate.Value;
             BookRegistrationDB.AddReg(regBook);
         }
@@ -48,7 +48,7 @@ namespace BookDBFinal
             //Creates Book Object
             Book book = new Book();
             book.Title = cbBookTitle.Text;
-            book.BookIBSN =  "Book ISBN: " + cbISBN.Text;
+            book.BookIBSN =  cbISBN.Text;
             book.Price = Decimal.Parse(cbPrice.Text);
 
 
