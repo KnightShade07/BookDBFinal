@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace BookDBFinal
 {
-    
+
     public partial class AddBookFrm : Form
     {
         public AddBookFrm()
@@ -48,13 +48,13 @@ namespace BookDBFinal
             //Creates Book Object
             Book book = new Book();
             book.Title = cbBookTitle.Text;
-            book.BookIBSN =  cbISBN.Text;
+            book.BookIBSN = cbISBN.Text;
             book.Price = Decimal.Parse(cbPrice.Text);
 
 
             //adds to the database
             BookDB.Add(book);
-            
+
 
             //close form
             Close();
@@ -73,7 +73,7 @@ namespace BookDBFinal
             customer.DateOfBirth = dtpDOB.Value;
 
             CustomerDB.AddCustomer(customer);
-            
+
         }
 
 
@@ -99,7 +99,7 @@ namespace BookDBFinal
 
         private void PopulateBookList(List<Book> books)
         {
-            foreach(Book book in books)
+            foreach (Book book in books)
             {
                 cbBookTitle.Items.Add(book.Title);
                 cbISBN.Items.Add(book.BookIBSN);
@@ -109,7 +109,7 @@ namespace BookDBFinal
 
         private void PopulateCustomerList(List<Customer> customers)
         {
-            foreach(Customer customer in customers)
+            foreach (Customer customer in customers)
             {
                 cbFirstName.Items.Add(customer.FirstName);
                 cbLastName.Items.Add(customer.LastName);
@@ -118,7 +118,7 @@ namespace BookDBFinal
 
         private void PopulateRegList(List<Registration> registrations)
         {
-            foreach(Registration registration in registrations)
+            foreach (Registration registration in registrations)
             {
                 cbISBN.Items.Add(registration.ISBN);
 

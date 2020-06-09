@@ -16,7 +16,7 @@ namespace BookDBFinal
 
 
             SqlCommand getRegistrations = new SqlCommand();
-            getRegistrations.CommandText = "SELECT CustomerID " + ",ISBN " +
+            getRegistrations.CommandText = "SELECT ISBN " + 
                 ",RegDate " +
                 "FROM Registration";
 
@@ -54,7 +54,7 @@ namespace BookDBFinal
 
             insertCmd.Parameters.AddWithValue("@ISBN", reg.ISBN);
             insertCmd.Parameters.AddWithValue("@RegDate", reg.RegDate);
-            
+
 
             //Open Connection
             dbConnection.Open();
