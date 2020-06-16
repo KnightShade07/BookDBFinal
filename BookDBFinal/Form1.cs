@@ -11,7 +11,8 @@ using System.Windows.Forms;
 
 namespace BookDBFinal
 {
-
+    //TODO: Transfer Add Customer, Add Book and Add Regististrations
+    //To seperate forms.
     public partial class AddBookFrm : Form
     {
         private List<Customer> allCustomers;
@@ -30,11 +31,12 @@ namespace BookDBFinal
         {
             Registration regBook = new Registration();
             //implementation of string splitting.
-            String[] custInput = cbFirstName.Text.Split(' ');
+            String[] custInput = cbCustomerDetails.Text.Split(' ');
             regBook.CustomerID = Convert.ToInt16(custInput[0]);
             regBook.ISBN = cbISBN.Text;
             regBook.RegDate = dtPickerBookDate.Value;
             BookRegistrationDB.AddReg(regBook);
+            ClearFrm();
        
         }
 
@@ -65,15 +67,13 @@ namespace BookDBFinal
             //close form
             Close();
 
-            //displays info and creates a form
-            AddBookFrm addBookFrm = new AddBookFrm();
-            addBookFrm.ShowDialog();
+            
         }
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
             Customer customer = new Customer();
-            customer.FirstName = cbFirstName.Text;
+            customer.FirstName = cbCustomerDetails.Text;
             customer.LastName = cbLastName.Text;
             customer.Title = cbBookTitle.Text;
             customer.DateOfBirth = dtpDOB.Value;
@@ -120,7 +120,7 @@ namespace BookDBFinal
                 //cbFirstName.Items.Add(customer.FirstName);
                 //cbLastName.Items.Add(customer.LastName);
 
-                cbFirstName.Items.Add(Convert.ToString(customer.CustomerId) + " " + customer.FirstName + " " + customer.LastName);
+                cbCustomerDetails.Items.Add(Convert.ToString(customer.CustomerId) + " " + customer.FirstName + " " + customer.LastName);
             }
         }
 
@@ -131,6 +131,16 @@ namespace BookDBFinal
                 cbISBN.Items.Add(registration.ISBN);
 
             }
+        }
+        public void ClearFrm()
+        {
+            cbCustomerDetails.Text = "";
+        }
+
+        private void btnViewCustomerList_Click(object sender, EventArgs e)
+        {
+            Form2 customer = new Form2();
+            customer.ShowDialog();
         }
     }
 }

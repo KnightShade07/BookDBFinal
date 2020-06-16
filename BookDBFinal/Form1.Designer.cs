@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cbFirstName = new System.Windows.Forms.ComboBox();
+            this.cbCustomerDetails = new System.Windows.Forms.ComboBox();
             this.cbBookTitle = new System.Windows.Forms.ComboBox();
             this.btnAddCustomer = new System.Windows.Forms.Button();
             this.btnAddBook = new System.Windows.Forms.Button();
@@ -49,14 +49,14 @@
             this.btnViewBookList = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // cbFirstName
+            // cbCustomerDetails
             // 
-            this.cbFirstName.FormattingEnabled = true;
-            this.cbFirstName.Location = new System.Drawing.Point(205, 64);
-            this.cbFirstName.Name = "cbFirstName";
-            this.cbFirstName.Size = new System.Drawing.Size(121, 21);
-            this.cbFirstName.TabIndex = 0;
-            this.cbFirstName.SelectedIndexChanged += new System.EventHandler(this.cbBooks_SelectedIndexChanged);
+            this.cbCustomerDetails.FormattingEnabled = true;
+            this.cbCustomerDetails.Location = new System.Drawing.Point(205, 64);
+            this.cbCustomerDetails.Name = "cbCustomerDetails";
+            this.cbCustomerDetails.Size = new System.Drawing.Size(121, 21);
+            this.cbCustomerDetails.TabIndex = 0;
+            this.cbCustomerDetails.SelectedIndexChanged += new System.EventHandler(this.cbBooks_SelectedIndexChanged);
             // 
             // cbBookTitle
             // 
@@ -207,6 +207,7 @@
             this.btnViewCustomerList.TabIndex = 19;
             this.btnViewCustomerList.Text = "View Customer List";
             this.btnViewCustomerList.UseVisualStyleBackColor = true;
+            this.btnViewCustomerList.Click += new System.EventHandler(this.btnViewCustomerList_Click);
             // 
             // btnViewBookList
             // 
@@ -240,7 +241,7 @@
             this.Controls.Add(this.btnAddBook);
             this.Controls.Add(this.btnAddCustomer);
             this.Controls.Add(this.cbBookTitle);
-            this.Controls.Add(this.cbFirstName);
+            this.Controls.Add(this.cbCustomerDetails);
             this.Name = "AddBookFrm";
             this.Text = "Book Registration";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -251,7 +252,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cbFirstName;
+        private System.Windows.Forms.ComboBox cbCustomerDetails;
         private System.Windows.Forms.ComboBox cbBookTitle;
         private System.Windows.Forms.Button btnAddCustomer;
         private System.Windows.Forms.Button btnAddBook;
