@@ -71,10 +71,7 @@ namespace BookDBFinal
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //Load all books
-            List<Book> allBooks = BookDB.GetAllBooks();
-
-            PopulateBookList(allBooks);
+            
 
             //Load all customers
 
@@ -87,16 +84,6 @@ namespace BookDBFinal
             List<Registration> allRegistrations = BookRegistrationDB.RegisterBook();
 
             PopulateRegList(allRegistrations);
-        }
-
-        private void PopulateBookList(List<Book> books)
-        {
-            foreach (Book book in books)
-            {
-                cbBookTitle.Items.Add(book.Title);
-                cbISBN.Items.Add(book.BookIBSN);
-                cbPrice.Items.Add(book.Price);
-            }
         }
 
         private void PopulateCustomerList(List<Customer> customers)
