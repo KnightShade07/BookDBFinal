@@ -14,6 +14,8 @@ namespace BookDBFinal
 
     public partial class AddBookFrm : Form
     {
+        private List<Customer> allCustomers;
+        
         public AddBookFrm()
         {
             InitializeComponent();
@@ -26,10 +28,20 @@ namespace BookDBFinal
 
         private void btnRegisterBook_Click(object sender, EventArgs e)
         {
+            SqlConnection dbConnection = DBHelper.GetConnection();
+            SqlCommand getCustomerID = new SqlCommand();
+
+            getCustomerID.CommandText = "SELECT CustomerID" +
+                "FROM Customer" +
+                "WHERE FirstName = " + cbFirstName.Text + "AND LastName = " + cbLastName.Text;
+            getCustomerID.Connection = dbConnection;
+            
+
             Registration regBook = new Registration();
             regBook.ISBN = cbISBN.Text;
             regBook.RegDate = dtPickerBookDate.Value;
             BookRegistrationDB.AddReg(regBook);
+       
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -86,7 +98,7 @@ namespace BookDBFinal
 
             //Load all customers
 
-            List<Customer> allCustomers = CustomerDB.GetAllCustomers();
+            allCustomers = CustomerDB.GetAllCustomers();
 
             PopulateCustomerList(allCustomers);
 
@@ -111,8 +123,10 @@ namespace BookDBFinal
         {
             foreach (Customer customer in customers)
             {
-                cbFirstName.Items.Add(customer.FirstName);
-                cbLastName.Items.Add(customer.LastName);
+                //cbFirstName.Items.Add(customer.FirstName);
+                //cbLastName.Items.Add(customer.LastName);
+
+                cbFirstName.Items.Add(Convert.ToString(customer.CustomerId) + " " + customer.FirstName + " " + customer.LastName);
             }
         }
 
