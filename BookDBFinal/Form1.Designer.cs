@@ -107,11 +107,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(122, 67);
+            this.label1.Location = new System.Drawing.Point(106, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.Size = new System.Drawing.Size(89, 13);
             this.label1.TabIndex = 6;
-            this.label1.Text = "First Name:";
+            this.label1.Text = "Customer Details:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
