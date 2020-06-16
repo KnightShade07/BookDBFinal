@@ -17,7 +17,7 @@ namespace BookDBFinal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddBookFrm());
+            Application.Run(new BookDBFrm());
         }
     }
 }
