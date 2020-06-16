@@ -50,10 +50,11 @@ namespace BookDBFinal
             SqlCommand insertCmd = new SqlCommand();
             insertCmd.Connection = dbConnection;
             insertCmd.CommandText = "INSERT INTO Customer(DateOfBirth,FirstName,Title)" +
-                "VALUES(@DateOfBirth, @FirstName,@Title)";
+                "VALUES(@DateOfBirth, @FirstName, @LastName, @Title)";
 
             insertCmd.Parameters.AddWithValue("@DateOfBirth", customer.DateOfBirth);
             insertCmd.Parameters.AddWithValue("@FirstName", customer.FirstName);
+            insertCmd.Parameters.AddWithValue("@LastName", customer.LastName);
             insertCmd.Parameters.AddWithValue("@Title", customer.Title);
 
             dbConnection.Open();
