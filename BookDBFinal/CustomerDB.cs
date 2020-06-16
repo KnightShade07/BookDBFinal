@@ -17,6 +17,7 @@ namespace BookDBFinal
             getCustomers.CommandText = "SELECT DateOfBirth " + ",FirstName " +
                 ",LastName " +
                 ",Title " +
+                ",CustomerID " +
                 "FROM Customer";
             getCustomers.Connection = dbConnection;
 
@@ -29,6 +30,7 @@ namespace BookDBFinal
             while (CustomerRdr.Read())
             {
                 Customer tempCustomer = new Customer();
+                tempCustomer.CustomerId = Convert.ToInt16(CustomerRdr["CustomerID"]);
                 tempCustomer.DateOfBirth = Convert.ToDateTime(CustomerRdr["DateOfBirth"]);
                 tempCustomer.FirstName = Convert.ToString(CustomerRdr["FirstName"]);
                 tempCustomer.LastName = Convert.ToString(CustomerRdr["LastName"]);
