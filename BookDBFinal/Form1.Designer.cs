@@ -29,38 +29,24 @@
         private void InitializeComponent()
         {
             this.cbCustomerDetails = new System.Windows.Forms.ComboBox();
-            this.cbBookTitle = new System.Windows.Forms.ComboBox();
             this.btnAddCustomer = new System.Windows.Forms.Button();
             this.btnAddBook = new System.Windows.Forms.Button();
             this.btnRegisterBook = new System.Windows.Forms.Button();
-            this.dtPickerBookDate = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.cbISBN = new System.Windows.Forms.ComboBox();
-            this.cbPrice = new System.Windows.Forms.ComboBox();
-            this.dtpDOB = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
+            this.dtPickerBookDate = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cbCustomerDetails
             // 
             this.cbCustomerDetails.FormattingEnabled = true;
-            this.cbCustomerDetails.Location = new System.Drawing.Point(205, 109);
+            this.cbCustomerDetails.Location = new System.Drawing.Point(200, 154);
             this.cbCustomerDetails.Name = "cbCustomerDetails";
             this.cbCustomerDetails.Size = new System.Drawing.Size(121, 21);
             this.cbCustomerDetails.TabIndex = 0;
             this.cbCustomerDetails.SelectedIndexChanged += new System.EventHandler(this.cbBooks_SelectedIndexChanged);
-            // 
-            // cbBookTitle
-            // 
-            this.cbBookTitle.FormattingEnabled = true;
-            this.cbBookTitle.Location = new System.Drawing.Point(205, 184);
-            this.cbBookTitle.Name = "cbBookTitle";
-            this.cbBookTitle.Size = new System.Drawing.Size(121, 21);
-            this.cbBookTitle.TabIndex = 1;
             // 
             // btnAddCustomer
             // 
@@ -92,111 +78,62 @@
             this.btnRegisterBook.UseVisualStyleBackColor = true;
             this.btnRegisterBook.Click += new System.EventHandler(this.btnRegisterBook_Click);
             // 
-            // dtPickerBookDate
-            // 
-            this.dtPickerBookDate.Location = new System.Drawing.Point(194, 284);
-            this.dtPickerBookDate.Name = "dtPickerBookDate";
-            this.dtPickerBookDate.Size = new System.Drawing.Size(200, 20);
-            this.dtPickerBookDate.TabIndex = 5;
-            this.dtPickerBookDate.ValueChanged += new System.EventHandler(this.dtPickerBookDate_ValueChanged);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(99, 117);
+            this.label1.Location = new System.Drawing.Point(86, 154);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Customer Details:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(122, 184);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Book";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(106, 290);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Checkout Date:";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(118, 225);
+            this.label4.Location = new System.Drawing.Point(86, 210);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(32, 13);
-            this.label4.TabIndex = 10;
+            this.label4.TabIndex = 12;
             this.label4.Text = "ISBN";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(119, 254);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Price";
             // 
             // cbISBN
             // 
             this.cbISBN.FormattingEnabled = true;
-            this.cbISBN.Location = new System.Drawing.Point(205, 217);
+            this.cbISBN.Location = new System.Drawing.Point(200, 207);
             this.cbISBN.Name = "cbISBN";
             this.cbISBN.Size = new System.Drawing.Size(121, 21);
-            this.cbISBN.TabIndex = 13;
+            this.cbISBN.TabIndex = 15;
             // 
-            // cbPrice
+            // dtPickerBookDate
             // 
-            this.cbPrice.FormattingEnabled = true;
-            this.cbPrice.Location = new System.Drawing.Point(205, 254);
-            this.cbPrice.Name = "cbPrice";
-            this.cbPrice.Size = new System.Drawing.Size(121, 21);
-            this.cbPrice.TabIndex = 14;
+            this.dtPickerBookDate.Location = new System.Drawing.Point(185, 271);
+            this.dtPickerBookDate.Name = "dtPickerBookDate";
+            this.dtPickerBookDate.Size = new System.Drawing.Size(200, 20);
+            this.dtPickerBookDate.TabIndex = 19;
             // 
-            // dtpDOB
+            // label3
             // 
-            this.dtpDOB.Location = new System.Drawing.Point(190, 154);
-            this.dtpDOB.Name = "dtpDOB";
-            this.dtpDOB.Size = new System.Drawing.Size(200, 20);
-            this.dtpDOB.TabIndex = 15;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(118, 161);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 13);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Date of Birth";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(86, 278);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 13);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Checkout Date:";
             // 
             // BookDBFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 450);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.dtpDOB);
-            this.Controls.Add(this.cbPrice);
-            this.Controls.Add(this.cbISBN);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.dtPickerBookDate);
+            this.Controls.Add(this.cbISBN);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnRegisterBook);
             this.Controls.Add(this.btnAddBook);
             this.Controls.Add(this.btnAddCustomer);
-            this.Controls.Add(this.cbBookTitle);
             this.Controls.Add(this.cbCustomerDetails);
             this.Name = "BookDBFrm";
             this.Text = "Book Registration";
@@ -209,20 +146,14 @@
         #endregion
 
         private System.Windows.Forms.ComboBox cbCustomerDetails;
-        private System.Windows.Forms.ComboBox cbBookTitle;
         private System.Windows.Forms.Button btnAddCustomer;
         private System.Windows.Forms.Button btnAddBook;
         private System.Windows.Forms.Button btnRegisterBook;
-        private System.Windows.Forms.DateTimePicker dtPickerBookDate;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbISBN;
-        private System.Windows.Forms.ComboBox cbPrice;
-        private System.Windows.Forms.DateTimePicker dtpDOB;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dtPickerBookDate;
+        private System.Windows.Forms.Label label3;
     }
 }
 

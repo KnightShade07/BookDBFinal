@@ -110,7 +110,7 @@
             this.Controls.Add(this.cbCustomerDetails);
             this.Controls.Add(this.btnDBAddCustomer);
             this.Name = "AddCustomerFrm";
-            this.Text = "Form2";
+            this.Text = "AddCustomerForm";
             this.Load += new System.EventHandler(this.AddCustomerFrm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
