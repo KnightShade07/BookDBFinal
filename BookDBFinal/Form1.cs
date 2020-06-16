@@ -52,20 +52,11 @@ namespace BookDBFinal
 
         private void btnAddBook_Click(object sender, EventArgs e)
         {
+            AddBookFrm bookFrm = new AddBookFrm();
+            bookFrm.ShowDialog();
 
-            //Creates Book Object
-            Book book = new Book();
-            book.Title = cbBookTitle.Text;
-            book.BookIBSN = cbISBN.Text;
-            book.Price = Decimal.Parse(cbPrice.Text);
-
-
-            //adds to the database
-            BookDB.Add(book);
-
-
-            //close form
-            Close();
+            
+            
 
             
         }
