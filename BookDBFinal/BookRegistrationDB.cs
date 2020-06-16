@@ -50,11 +50,12 @@ namespace BookDBFinal
             //Set up a command object (query)
             SqlCommand insertCmd = new SqlCommand();
             insertCmd.Connection = dbConnection;
-            insertCmd.CommandText = "INSERT INTO Registration(ISBN, RegDate)" +
-                                    "VALUES(@ISBN, @RegDate)";
+            insertCmd.CommandText = "INSERT INTO Registration(ISBN, RegDate, CustomerID)" +
+                                    "VALUES(@ISBN, @RegDate, CustomerID)";
 
             insertCmd.Parameters.AddWithValue("@ISBN", reg.ISBN);
             insertCmd.Parameters.AddWithValue("@RegDate", reg.RegDate);
+            insertCmd.Parameters.AddWithValue("@CustomerID", reg.CustomerID);
             
             
 
