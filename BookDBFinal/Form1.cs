@@ -28,16 +28,10 @@ namespace BookDBFinal
 
         private void btnRegisterBook_Click(object sender, EventArgs e)
         {
-            SqlConnection dbConnection = DBHelper.GetConnection();
-            SqlCommand getCustomerID = new SqlCommand();
-
-            getCustomerID.CommandText = "SELECT CustomerID" +
-                "FROM Customer" +
-                "WHERE FirstName = " + cbFirstName.Text + "AND LastName = " + cbLastName.Text;
-            getCustomerID.Connection = dbConnection;
-            
-
             Registration regBook = new Registration();
+            //implementation of string splitting.
+            String[] custInput = cbFirstName.Text.Split(' ');
+            regBook.CustomerID = Convert.ToInt16(custInput[0]);
             regBook.ISBN = cbISBN.Text;
             regBook.RegDate = dtPickerBookDate.Value;
             BookRegistrationDB.AddReg(regBook);
