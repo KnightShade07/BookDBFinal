@@ -1,6 +1,6 @@
 ﻿namespace BookDBFinal
 {
-    partial class AddBookFrm
+    partial class BookDBFrm
     {
         /// <summary>
         /// Required designer variable.
@@ -43,8 +43,6 @@
             this.cbPrice = new System.Windows.Forms.ComboBox();
             this.dtpDOB = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.cbLastName = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.btnViewCustomerList = new System.Windows.Forms.Button();
             this.btnViewBookList = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -52,7 +50,7 @@
             // cbCustomerDetails
             // 
             this.cbCustomerDetails.FormattingEnabled = true;
-            this.cbCustomerDetails.Location = new System.Drawing.Point(205, 64);
+            this.cbCustomerDetails.Location = new System.Drawing.Point(205, 109);
             this.cbCustomerDetails.Name = "cbCustomerDetails";
             this.cbCustomerDetails.Size = new System.Drawing.Size(121, 21);
             this.cbCustomerDetails.TabIndex = 0;
@@ -107,7 +105,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(106, 67);
+            this.label1.Location = new System.Drawing.Point(99, 117);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 13);
             this.label1.TabIndex = 6;
@@ -182,23 +180,6 @@
             this.label6.TabIndex = 16;
             this.label6.Text = "Date of Birth";
             // 
-            // cbLastName
-            // 
-            this.cbLastName.FormattingEnabled = true;
-            this.cbLastName.Location = new System.Drawing.Point(205, 108);
-            this.cbLastName.Name = "cbLastName";
-            this.cbLastName.Size = new System.Drawing.Size(121, 21);
-            this.cbLastName.TabIndex = 17;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(122, 116);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 13);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "Last Name:";
-            // 
             // btnViewCustomerList
             // 
             this.btnViewCustomerList.Location = new System.Drawing.Point(420, 239);
@@ -225,8 +206,6 @@
             this.ClientSize = new System.Drawing.Size(595, 450);
             this.Controls.Add(this.btnViewBookList);
             this.Controls.Add(this.btnViewCustomerList);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.cbLastName);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dtpDOB);
             this.Controls.Add(this.cbPrice);
@@ -267,8 +246,6 @@
         private System.Windows.Forms.ComboBox cbPrice;
         private System.Windows.Forms.DateTimePicker dtpDOB;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cbLastName;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnViewCustomerList;
         private System.Windows.Forms.Button btnViewBookList;
     }

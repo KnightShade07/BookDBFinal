@@ -13,11 +13,11 @@ namespace BookDBFinal
 {
     //TODO: Transfer Add Customer, Add Book and Add Regististrations
     //To seperate forms.
-    public partial class AddBookFrm : Form
+    public partial class BookDBFrm : Form
     {
         private List<Customer> allCustomers;
         
-        public AddBookFrm()
+        public BookDBFrm()
         {
             InitializeComponent();
         }
@@ -72,13 +72,8 @@ namespace BookDBFinal
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
-            Customer customer = new Customer();
-            customer.FirstName = cbCustomerDetails.Text;
-            customer.LastName = cbLastName.Text;
-            customer.Title = cbBookTitle.Text;
-            customer.DateOfBirth = dtpDOB.Value;
-
-            CustomerDB.AddCustomer(customer);
+            AddCustomerFrm customer = new AddCustomerFrm();
+            customer.ShowDialog();
 
         }
 
@@ -139,8 +134,7 @@ namespace BookDBFinal
 
         private void btnViewCustomerList_Click(object sender, EventArgs e)
         {
-            Form2 customer = new Form2();
-            customer.ShowDialog();
+            
         }
     }
 }
