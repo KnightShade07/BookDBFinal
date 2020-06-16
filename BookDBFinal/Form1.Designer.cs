@@ -43,8 +43,6 @@
             this.cbPrice = new System.Windows.Forms.ComboBox();
             this.dtpDOB = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnViewCustomerList = new System.Windows.Forms.Button();
-            this.btnViewBookList = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cbCustomerDetails
@@ -66,7 +64,7 @@
             // 
             // btnAddCustomer
             // 
-            this.btnAddCustomer.Location = new System.Drawing.Point(420, 67);
+            this.btnAddCustomer.Location = new System.Drawing.Point(420, 142);
             this.btnAddCustomer.Name = "btnAddCustomer";
             this.btnAddCustomer.Size = new System.Drawing.Size(117, 63);
             this.btnAddCustomer.TabIndex = 2;
@@ -76,7 +74,7 @@
             // 
             // btnAddBook
             // 
-            this.btnAddBook.Location = new System.Drawing.Point(420, 161);
+            this.btnAddBook.Location = new System.Drawing.Point(420, 254);
             this.btnAddBook.Name = "btnAddBook";
             this.btnAddBook.Size = new System.Drawing.Size(117, 58);
             this.btnAddBook.TabIndex = 3;
@@ -180,32 +178,11 @@
             this.label6.TabIndex = 16;
             this.label6.Text = "Date of Birth";
             // 
-            // btnViewCustomerList
-            // 
-            this.btnViewCustomerList.Location = new System.Drawing.Point(420, 239);
-            this.btnViewCustomerList.Name = "btnViewCustomerList";
-            this.btnViewCustomerList.Size = new System.Drawing.Size(117, 65);
-            this.btnViewCustomerList.TabIndex = 19;
-            this.btnViewCustomerList.Text = "View Customer List";
-            this.btnViewCustomerList.UseVisualStyleBackColor = true;
-            this.btnViewCustomerList.Click += new System.EventHandler(this.btnViewCustomerList_Click);
-            // 
-            // btnViewBookList
-            // 
-            this.btnViewBookList.Location = new System.Drawing.Point(420, 332);
-            this.btnViewBookList.Name = "btnViewBookList";
-            this.btnViewBookList.Size = new System.Drawing.Size(117, 66);
-            this.btnViewBookList.TabIndex = 20;
-            this.btnViewBookList.Text = "View Book List";
-            this.btnViewBookList.UseVisualStyleBackColor = true;
-            // 
-            // AddBookFrm
+            // BookDBFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 450);
-            this.Controls.Add(this.btnViewBookList);
-            this.Controls.Add(this.btnViewCustomerList);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dtpDOB);
             this.Controls.Add(this.cbPrice);
@@ -221,7 +198,7 @@
             this.Controls.Add(this.btnAddCustomer);
             this.Controls.Add(this.cbBookTitle);
             this.Controls.Add(this.cbCustomerDetails);
-            this.Name = "AddBookFrm";
+            this.Name = "BookDBFrm";
             this.Text = "Book Registration";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -246,8 +223,6 @@
         private System.Windows.Forms.ComboBox cbPrice;
         private System.Windows.Forms.DateTimePicker dtpDOB;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnViewCustomerList;
-        private System.Windows.Forms.Button btnViewBookList;
     }
 }
 
