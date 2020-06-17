@@ -15,6 +15,7 @@ namespace BookDBFinal
         public string Title { get; set; }
 
         
+        
 
         public string GetDisplayText(string seperator)
         {

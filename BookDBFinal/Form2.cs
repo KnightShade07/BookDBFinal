@@ -21,8 +21,9 @@ namespace BookDBFinal
         private void btnDBAddCustomer_Click(object sender, EventArgs e)
         {
             Customer customer = new Customer();
-            customer.FirstName = cbCustomerDetails.Text;
-            customer.Title = cbBookTitle.Text;
+            customer.FirstName = cbFirstName.Text;
+            customer.LastName = cbLastName.Text;
+            customer.Title = cbPersonTitle.Text;
             customer.DateOfBirth = dtpDOB.Value;
 
             CustomerDB.AddCustomer(customer);
@@ -32,20 +33,15 @@ namespace BookDBFinal
         {
             foreach (Customer customer in customers)
             {
-                //cbFirstName.Items.Add(customer.FirstName);
-                //cbLastName.Items.Add(customer.LastName);
+                cbFirstName.Items.Add(customer.FirstName);
+                cbLastName.Items.Add(customer.LastName);
+                cbPersonTitle.Items.Add(customer.Title);
 
-                cbCustomerDetails.Items.Add(Convert.ToString(customer.CustomerId) + " " + customer.FirstName + " " + customer.LastName);
+                
             }
         }
 
-        private void PopulateBookList(List<Book> books)
-        {
-            foreach (Book book in books)
-            {
-                cbBookTitle.Items.Add(Convert.ToString(book.Title) + " " + book.Price + " " + book.BookIBSN);
-            }
-        }
+        
 
         private void AddCustomerFrm_Load(object sender, EventArgs e)
         {
@@ -53,10 +49,7 @@ namespace BookDBFinal
 
             PopulateCustomerList(allCustomers);
 
-            //Load all books
-            List<Book> allBooks = BookDB.GetAllBooks();
-
-            PopulateBookList(allBooks);
+           
         }
     }
 }

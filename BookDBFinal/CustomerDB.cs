@@ -49,7 +49,7 @@ namespace BookDBFinal
 
             SqlCommand insertCmd = new SqlCommand();
             insertCmd.Connection = dbConnection;
-            insertCmd.CommandText = "INSERT INTO Customer(DateOfBirth,FirstName,Title)" +
+            insertCmd.CommandText = "INSERT INTO Customer(DateOfBirth,FirstName, LastName,Title)" +
                 "VALUES(@DateOfBirth, @FirstName, @LastName, @Title)";
 
             insertCmd.Parameters.AddWithValue("@DateOfBirth", customer.DateOfBirth);
