@@ -27,6 +27,7 @@ namespace BookDBFinal
             customer.DateOfBirth = dtpDOB.Value;
 
             CustomerDB.AddCustomer(customer);
+            ClearCustomerFrm();
         }
 
         private void PopulateCustomerList(List<Customer> customers)
@@ -50,6 +51,12 @@ namespace BookDBFinal
             PopulateCustomerList(allCustomers);
 
            
+        }
+        public void ClearCustomerFrm()
+        {
+            cbFirstName.Text = "";
+            cbLastName.Text = "";
+            cbPersonTitle.Text = "";
         }
     }
 }
