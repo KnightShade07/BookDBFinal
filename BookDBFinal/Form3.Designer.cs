@@ -135,6 +135,7 @@
             this.btnRefreshBookList.TabIndex = 21;
             this.btnRefreshBookList.Text = "Refresh the Book List";
             this.btnRefreshBookList.UseVisualStyleBackColor = true;
+            this.btnRefreshBookList.Click += new System.EventHandler(this.btnRefreshBookList_Click);
             // 
             // AddBookFrm
             // 

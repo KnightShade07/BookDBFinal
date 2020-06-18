@@ -55,5 +55,10 @@ namespace BookDBFinal
             cbISBN.Text = "";
             cbPrice.Text = "";
         }
+
+        private void btnRefreshBookList_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
