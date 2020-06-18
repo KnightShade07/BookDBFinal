@@ -45,6 +45,15 @@ namespace BookDBFinal
 
             //adds to the database
             BookDB.Add(book);
+            //clears the book form when the user clicks the book
+            ClearBookFrm();
+        }
+
+        public void ClearBookFrm()
+        {
+            cbBookTitle.Text = "";
+            cbISBN.Text = "";
+            cbPrice.Text = "";
         }
     }
 }
