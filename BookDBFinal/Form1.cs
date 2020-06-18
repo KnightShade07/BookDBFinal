@@ -116,5 +116,18 @@ namespace BookDBFinal
         {
             
         }
+
+        private void btnRefreshRegList_Click(object sender, EventArgs e)
+        {
+            refreshRegList();
+        }
+
+        public void refreshRegList()
+        {
+            //Load all Registrations
+            List<Registration> allRegistrations = BookRegistrationDB.RegisterBook();
+            allRegistrations.Clear();
+            PopulateRegList(allRegistrations);
+        }
     }
 }

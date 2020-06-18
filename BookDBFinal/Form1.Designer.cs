@@ -38,6 +38,7 @@
             this.dtPickerBookDate = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnRefreshRegList = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cbCustomerDetails
@@ -132,11 +133,22 @@
             this.label2.Text = "This is where you register a customer to the database!\r\nIf you want to navigate t" +
     "o the other pages, click the \"Add Customer\"\r\n or \"Add Book\" Buttons!";
             // 
+            // btnRefreshRegList
+            // 
+            this.btnRefreshRegList.Location = new System.Drawing.Point(402, 329);
+            this.btnRefreshRegList.Name = "btnRefreshRegList";
+            this.btnRefreshRegList.Size = new System.Drawing.Size(135, 69);
+            this.btnRefreshRegList.TabIndex = 22;
+            this.btnRefreshRegList.Text = "Refreshes the Registration List";
+            this.btnRefreshRegList.UseVisualStyleBackColor = true;
+            this.btnRefreshRegList.Click += new System.EventHandler(this.btnRefreshRegList_Click);
+            // 
             // BookDBFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 450);
+            this.Controls.Add(this.btnRefreshRegList);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dtPickerBookDate);
@@ -167,6 +179,7 @@
         private System.Windows.Forms.DateTimePicker dtPickerBookDate;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnRefreshRegList;
     }
 }
 
