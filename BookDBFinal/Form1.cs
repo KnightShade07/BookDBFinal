@@ -107,7 +107,9 @@ namespace BookDBFinal
         }
         public void ClearFrm()
         {
+            //clears the form after a customer is registered to the DB!
             cbCustomerDetails.Text = "";
+            cbISBN.Text = "";
         }
 
         private void btnViewCustomerList_Click(object sender, EventArgs e)
