@@ -58,7 +58,14 @@ namespace BookDBFinal
 
         private void btnRefreshBookList_Click(object sender, EventArgs e)
         {
+            refreshBookList();
+        }
 
+        public void refreshBookList()
+        {
+            List<Book> allBooks = BookDB.GetAllBooks();
+            allBooks.Clear();
+            PopulateBookList(allBooks);
         }
     }
 }

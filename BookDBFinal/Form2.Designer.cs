@@ -145,6 +145,7 @@
             this.btnRefreshCustomerList.TabIndex = 24;
             this.btnRefreshCustomerList.Text = "Refresh The Lists";
             this.btnRefreshCustomerList.UseVisualStyleBackColor = true;
+            this.btnRefreshCustomerList.Click += new System.EventHandler(this.btnRefreshCustomerList_Click);
             // 
             // AddCustomerFrm
             // 

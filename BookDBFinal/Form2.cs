@@ -61,7 +61,15 @@ namespace BookDBFinal
 
         public void RefreshCustomerList()
         {
+            allCustomers = CustomerDB.GetAllCustomers();
+            allCustomers.Clear();
+            PopulateCustomerList(allCustomers);
 
+        }
+
+        private void btnRefreshCustomerList_Click(object sender, EventArgs e)
+        {
+            RefreshCustomerList();
         }
     }
 }
