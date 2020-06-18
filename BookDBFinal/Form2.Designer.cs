@@ -39,6 +39,7 @@
             this.cbLastName = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnRefreshCustomerList = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnDBAddCustomer
@@ -136,11 +137,21 @@
             this.label5.TabIndex = 23;
             this.label5.Text = "This is where you can register a customer to the database!\r\n";
             // 
+            // btnRefreshCustomerList
+            // 
+            this.btnRefreshCustomerList.Location = new System.Drawing.Point(483, 326);
+            this.btnRefreshCustomerList.Name = "btnRefreshCustomerList";
+            this.btnRefreshCustomerList.Size = new System.Drawing.Size(94, 71);
+            this.btnRefreshCustomerList.TabIndex = 24;
+            this.btnRefreshCustomerList.Text = "Refresh The Lists";
+            this.btnRefreshCustomerList.UseVisualStyleBackColor = true;
+            // 
             // AddCustomerFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRefreshCustomerList);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cbLastName);
@@ -173,5 +184,6 @@
         private System.Windows.Forms.ComboBox cbLastName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnRefreshCustomerList;
     }
 }

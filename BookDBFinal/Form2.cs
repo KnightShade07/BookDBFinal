@@ -58,5 +58,10 @@ namespace BookDBFinal
             cbLastName.Text = "";
             cbPersonTitle.Text = "";
         }
+
+        public void RefreshCustomerList()
+        {
+
+        }
     }
 }
