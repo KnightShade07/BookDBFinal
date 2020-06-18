@@ -37,6 +37,7 @@
             this.cbISBN = new System.Windows.Forms.ComboBox();
             this.dtPickerBookDate = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cbCustomerDetails
@@ -121,11 +122,22 @@
             this.label3.TabIndex = 20;
             this.label3.Text = "Checkout Date:";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(86, 58);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(329, 39);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "This is where you register a customer to the database!\r\nIf you want to navigate t" +
+    "o the other pages, click the \"Add Customer\"\r\n or \"Add Book\" Buttons!";
+            // 
             // BookDBFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 450);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dtPickerBookDate);
             this.Controls.Add(this.cbISBN);
@@ -154,6 +166,7 @@
         private System.Windows.Forms.ComboBox cbISBN;
         private System.Windows.Forms.DateTimePicker dtPickerBookDate;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }
 
